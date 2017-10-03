@@ -13,24 +13,20 @@ class Stack(LinkedList):
         self.head = tmp
         return x
 
-#examples
+if __name__ == "__main__":
+    #examples
 
-s = Stack()
-s.push('a')
-s.push('b')
-s.push('c')
+    s = Stack()
+    s.push('a')
+    s.push('b')
+    s.push('c')
 
-print s
-print
-print
+    print s
 
+    print 'running pop...'
+    s.pop()
+    print s
 
-print 'running pop...'
-s.pop()
-print s
-print
-print
-
-print 'running pop...'
-s.pop()
-print s
+    print 'running pop...'
+    s.pop()
+    print s

@@ -43,14 +43,15 @@ class LinkedList:
             s += p.data
         return s
 
-# example code
-l = LinkedList()
+if __name__ == "__main__":
+    # example code
+    l = LinkedList()
 
-l.add('a')
-l.add('b')
-l.add('c')
+    l.add('a')
+    l.add('b')
+    l.add('c')
 
-print l
-l.remove(l.search('b'))
-print
-print l
+    print l
+    l.remove(l.search('b'))
+    print
+    print l
