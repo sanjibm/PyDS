@@ -1,5 +1,3 @@
-
-from linked_list import Node
 from linked_list import LinkedList
 
 class Stack(LinkedList):
@@ -23,9 +21,16 @@ s.push('b')
 s.push('c')
 
 print s
+print
+print
 
-print s.pop()
+
+print 'running pop...'
+s.pop()
 print s
+print
+print
 
-print s.pop()
+print 'running pop...'
+s.pop()
 print s
