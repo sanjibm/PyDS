@@ -52,6 +52,26 @@ def mergeSort(x):
         b = mergeSort(x[middle:])
         return merge(a,b)
 
+def quickSort(array):
+    less = []
+    equal = []
+    greater = []
+
+    if len(array) > 1:
+        pivot = array[0]
+        for x in array:
+            if x < pivot:
+                less.append(x)
+            if x == pivot:
+                equal.append(x)
+            if x > pivot:
+                greater.append(x)
+        # Don't forget to return something!
+        return quickSort(less)+equal+quickSort(greater)  # Just use the + operator to join lists
+    # Note that you want equal ^^^^^ not pivot
+    else:  # You need to hande the part at the end of the recursion - when you only have one element in your array, just return the array.
+        return array
+
 
 # Driver code to test above
 arr = [64, 34, 25, 12, 22, 11, 90]
@@ -59,7 +79,8 @@ print 'Length', len(arr)
 
 #bubbleSort(arr)
 #selectionSort(arr)
-print 'Sorted array is', mergesort(arr)
+#print 'Sorted array is', mergesort(arr)
+print 'Sorted array is',quickSort(arr)
 
 print ("Sorted array is:")
 for i in range(len(arr)):
