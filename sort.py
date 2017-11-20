@@ -78,9 +78,9 @@ arr = [64, 34, 25, 12, 22, 11, 90]
 print 'Length', len(arr)
 
 #bubbleSort(arr)
-#selectionSort(arr)
+selectionSort(arr)
 #print 'Sorted array is', mergesort(arr)
-print 'Sorted array is',quickSort(arr)
+#print 'Sorted array is',quickSort(arr)
 
 print ("Sorted array is:")
 for i in range(len(arr)):
