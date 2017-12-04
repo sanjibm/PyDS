@@ -1,5 +1,13 @@
 #!/usr/bin/env python
 
+"""
+Basic LinkList implementation using a ListNode class with related methods for
+the node as well as for the list
+
+Includes the additional functions on linked lists:
+- merging two sorted lists
+"""
+
 class ListNode(object):
     def __init__(self, data=None, next=None):
         self.data = data
@@ -31,6 +39,9 @@ def push(listHead, node):
     return node
 
 def createList(list):
+    """
+    create a linked list from a python listHead
+    """
     n = ListNode()
     reference = None
     for i in reversed(list):
@@ -38,34 +49,43 @@ def createList(list):
         reference = push(reference,tmp)
     return reference
 
-def mergeTwoLists(p1, p2):
+def mergeTwoLists(l1, l2):
+    """
+    merge two sorted lists
+    """
+    if l1 == None and l2 != None:
+        return l2
+    elif l1 != None and l2 == None:
+        return l1
+    elif l1 == None and l2 == None:
+            return None
+
     reference = ListNode(-1)
     prev = reference
-    while (True):
+    breakNextTime = False
 
-        if (p1.next == None) and (p2.next == None):
-            print 'exiting...'
-            print 'p1: ', p1.data, (p1.next)
-            print 'p2: ', p2.data, (p2.next)
+    while (True):
+        if breakNextTime:
+            prev.next = extra
             break
 
-        print 'p1: ', p1.data, (p1.next)
-        print 'p2: ', p2.data, (p2.next)
+        if l1.data <= l2.data:
+            prev.next = l1
+            l1 = l1.next
+            if l1 == None:
+                extra = l2
+                breakNextTime = True
 
-        if p1.data <= p2.data:
-            prev.next = p1
-            p1 = p1.next
         else:
-            prev.next = p2
-            p2 = p2.next
-
+            prev.next = l2
+            l2 = l2.next
+            if l2 == None:
+                extra = l1
+                breakNextTime = True
 
         prev = prev.next
 
-
-    return reference
-
-
+    return reference.next
 
 if __name__ == "__main__":
     n1 = ListNode(5)
