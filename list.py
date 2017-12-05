@@ -38,6 +38,18 @@ def push(listHead, node):
         node.next = listHead
     return node
 
+def append(listHead, node):
+    p = listHead
+    while(True):
+        if p.next != None:
+            p = p.next
+        else:
+            p.next = node
+            break
+    return listHead
+
+
+
 def createList(list):
     """
     create a linked list from a python listHead
@@ -87,6 +99,17 @@ def mergeTwoLists(l1, l2):
 
     return reference.next
 
+def getIntersectionNode(headA, headB):
+    pA = headA
+    while (pA.next != None):
+        pB = headB
+        while (pB.next != None):
+            if pA.next == pB.next:
+                return pA.next
+            pB = pB.next
+        pA = pA.next
+    return None
+
 if __name__ == "__main__":
     n1 = ListNode(5)
     n2 = ListNode(6)
@@ -99,8 +122,18 @@ if __name__ == "__main__":
     n1 = push(n1, n3)
     #printList(n1)
 
-    l1 = createList([1,2,4])
+    l1 = createList([1,2,4,6])
     l2 = createList([1,3,4])
 
-    s= mergeTwoLists(l1,l2)
+    #s= mergeTwoLists(l1,l2)
+    #printList(s)
+
+    l3 = createList([8,9,10])
+    l1 = append(l1,l3)
+    l2 = append(l2,l3)
+
+    #printList(l1)
+    #printList(l2)
+
+    s = getIntersectionNode(l1,l2)
     printList(s)
