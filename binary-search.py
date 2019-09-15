@@ -2,6 +2,7 @@
 # Iterative Binary Search Function
 # It returns location of x in given array arr if present,
 # else returns None
+# Recursive version: https://www.geeksforgeeks.org/python-program-for-binary-search/
 
 arr = [56,45,23,5,2,76,45,12,16,78,9,14,28,52,95]
 arr.sort()

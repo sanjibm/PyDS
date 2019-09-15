@@ -1,18 +1,27 @@
+
+
 def productExceptSelf(nums):
     p = 1
     n = len(nums)
-    output = []
-    for i in range(0,n):
-        output.append(p)
+    left_products = []
+    for i in range(0, n):
+        left_products.append(p)
         p = p * nums[i]
-    print output
+    print('left products: ', left_products)
+
     p = 1
-    for i in range(n-1,-1,-1):
-        output[i] = output[i] * p
+    right_products = []
+    for i in range(n-1, -1, -1):
+        right_products.append(p)
         p = p * nums[i]
-    return output
+    right_products.reverse()
+    print('right products',right_products)
+
+    return [a*b for a,b in zip(left_products, right_products)]
+
 
 arr = [2,4,3]
 
-print arr
-print productExceptSelf(arr)
+print(arr)
+print(productExceptSelf(arr))
+

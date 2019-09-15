@@ -13,7 +13,7 @@ def countPrimes(n):
                 sieve[e] = False
 
     for i, x in enumerate(sieve):
-        print i, x
+        print(i, x)
 
     count = 0
     for x in sieve:
@@ -22,4 +22,4 @@ def countPrimes(n):
 
     return count
 
-print countPrimes(3)
+print(countPrimes(100))
