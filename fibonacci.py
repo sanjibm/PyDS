@@ -2,6 +2,7 @@
 Fibonacci numbers using memoisation
 """
 
+
 def fib(n):
     if n in fib.cache.keys():
         return fib.cache[n]
@@ -13,9 +14,10 @@ def fib(n):
     fib.cache[n] = result
     return result
 
+
 if __name__ == "__main__":
-    #initialize memo cache
+    # initialize memo cache
     fib.cache = {}
 
     for i in range(100):
-        print fib(i)
+        print(fib(i))

@@ -1,12 +1,15 @@
-import math
 
+# Iterative Binary Search Function
+# It returns location of x in given array arr if present,
+# else returns None
 
 arr = [56,45,23,5,2,76,45,12,16,78,9,14,28,52,95]
 arr.sort()
 
-toSearch = int(raw_input('Enter a number: '))
+toSearch = int(input('Enter a number: '))
 
-def binarySort(s, a):
+
+def binarySearch(s, a):
     start = 0
     end = len(a) - 1
     for i in range(start, end):
@@ -21,5 +24,5 @@ def binarySort(s, a):
             start = mid + 1
             continue
 
-print arr
-print binarySort(toSearch, arr)
+print(arr)
+print(binarySearch(toSearch, arr))
