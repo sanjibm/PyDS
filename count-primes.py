@@ -1,3 +1,9 @@
+# Sift the Two's and Sift the Three's,
+# The Sieve of Eratosthenes.
+# When the multiples sublime,
+# The numbers that remain are Prime.
+
+
 def countPrimes(n):
 
     if n == 0:
@@ -22,4 +28,4 @@ def countPrimes(n):
 
     return count
 
-print(countPrimes(100))
+print(countPrimes(20))
