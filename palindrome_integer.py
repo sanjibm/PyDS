@@ -12,7 +12,7 @@ half of the number digits.
 '''
 
 def is_palindrome(a):
-    if a < 0 or (a % 10 == 0 and a <> 0):
+    if a < 0 or (a % 10 == 0 and a != 0):
         return False
     if a == 0:
         return True
@@ -27,12 +27,12 @@ def is_palindrome(a):
         invertedNumber = invertedNumber * 10 + a % 10
         a = a/10
 
-    print invertedNumber, a
+    print(invertedNumber, a)
     return a == invertedNumber or a == invertedNumber/10
 
 
-print is_palindrome(10)
-print is_palindrome(121)
-print is_palindrome(12763)
-print is_palindrome(1221)
-print is_palindrome(456654)
+print(is_palindrome(10))
+print(is_palindrome(121))
+print(is_palindrome(12763))
+print(is_palindrome(1221))
+print(is_palindrome(456654))
