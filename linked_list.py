@@ -45,14 +45,14 @@ class LinkedList:
 
 if __name__ == "__main__":
     # example code
-    print 'creating new linked  list...'
+    print('creating new linked  list...')
     l = LinkedList()
 
     l.add('a')
     l.add('b')
     l.add('c')
 
-    print l
+    print(l)
     l.remove(l.search('b'))
     print
-    print l
+    print(l)

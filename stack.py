@@ -21,12 +21,22 @@ if __name__ == "__main__":
     s.push('b')
     s.push('c')
 
-    print s
+    assert str(s) == 'cba'
 
-    print 'running pop...'
-    s.pop()
-    print s
+    print(s)
 
-    print 'running pop...'
+    print('running pop...')
     s.pop()
-    print s
+
+    assert str(s) == 'ba'
+
+    print(s)
+
+    print('running pop...')
+    s.pop()
+
+    assert str(s) == 'a'
+
+    print(s)
+
+
