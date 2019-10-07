@@ -26,8 +26,8 @@ def twoSum(nums, target):
         if target - num in lookup:
             return [lookup[target - num], i]
         lookup[num] = i
-        print lookup
+        print(lookup)
     return []
 
 a = [2,3,5,6]
-print twoSum(a,8)
+print(twoSum(a,8))
